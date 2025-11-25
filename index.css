@@ -1,0 +1,131 @@
+/********* Att göra: ********
+Centrera h1
+Vertical scrollbar
+*****************************/
+
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Tillagd av Katrina för att stoppa horisontal scrollning */
+  html, body {
+  overflow-x: hidden;
+}
+
+body {
+  color: #2a4c81;
+  width: 100vw;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #EFEFEF;
+  padding: 1.3rem;
+  font-size: 2rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  position: fixed;
+  background-color: #EFEFEF;
+  top: 90px;
+  transform: translateX(100%);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  list-style: none;
+  padding: 0;
+  transition: 500ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul.active {
+  transform: translateX(0);
+  display: block;
+  text-align: center;
+  background-color: rgba(209, 209, 209, 0.7);
+}
+
+ul li a {
+  display: block;
+  padding: 30px 20%;
+  text-decoration: none;
+  color: #2a4c81;
+}
+
+ul li a:hover {
+  background-color: #FFF;
+}
+
+h1 {
+  margin: 0 auto;
+  font-size: 3rem;
+}
+
+img {
+  height: 30px;
+  padding: 10px;
+}
+
+button {
+  padding: 0px;
+  border-style: none;
+}
+
+main {
+  height: 70vh;
+}
+
+footer {
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.socials-container {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  justify-items: center;
+  margin: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger-img {
+    display: none;
+  }
+
+  .header {
+    font-size: 1.2rem;
+  }
+
+  ul {
+    background-color: rgba(209, 209, 209, 0.7);
+    position: absolute;
+    transform: none;
+    flex-direction: row;
+    height: 40px;
+    text-align: center;
+  }
+
+  ul li a {
+    width: calc(100vw / 4);
+    padding: 0;
+    height: 40px;
+    align-content: center;
+  }
+
+  main {
+    height: 100vh;
+  }
+}
+
+/* Malins Kod */

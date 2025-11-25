@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f3f6f9;
+  color: #333;
+}
+
+  html, body {
+  overflow-x: hidden;
+}
+
+/* Min HTML kod i en container för att funka med navbaren */
+.page-container {
+  max-width: 700px;
+  margin: auto;
+  padding: 30px;
+  padding-top: 60px;
+}
+
+/* Rubrikerna */
+h1, h2, h3 {
+  text-align: center;
+  color: #2a4c81;
+}
+
+/* Formuläret */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px;
+  border: 1px solid #ccd3df;
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* Submit knappen */
+input[type="submit"] {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background: #28ad8e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #28ad8e;
+}
+
+/* Meddelande */
+#message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Request listan */
+#requestList {
+  list-style: none;
+  padding: 0;
+}
+
+#requestList li {
+  background: white;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 4px solid #28ad8e;
+}
+
+/* Delete knappen */
+#requestList button {
+  background: #e04848;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#requestList button:hover {
+  background: #b93a3a;
+}
+
+/* Media Queries*/
+@media (max-width: 600px) {
+
+  body {
+    padding: 15px;
+  }
+
+  form {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  input[type="submit"] {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+ /* Uppdaterade efter navbar/ul krocken i css filerna */ 
+  #requestList {
+  all: unset;
+  display: block;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#requestList li {
+  all: unset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 8px;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid #28ad8e;
+}
+
+  #requestList button {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+/* Katrinas kod */
+/* Extra referenser:
+https://www.w3schools.com/cssref/css_selectors.php
+https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/submit */

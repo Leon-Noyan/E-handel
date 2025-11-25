@@ -1,0 +1,239 @@
+/*Cards and product styling*/
+.all-products {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    overflow-x: hidden;
+}
+
+.cards {
+    border: 1px black;
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cards:hover {
+    box-shadow: 2px 6px 14px rgba(0, 0, 0, 0.7);
+}
+
+.cards img {
+    height: 7rem;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.cards h3 {
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /*title limit up to 2 rows*/
+    -webkit-box-orient: vertical;
+}
+
+.cards p {
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+    color: rgb(182, 26, 26);
+}
+/*end of cards and products styling*/
+
+/*add to cart styling*/
+.add-cart-btn {
+    background-color: rgb(40, 173, 142);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    width: 12rem;
+    margin-top: 1rem;
+}
+
+.add-cart-btn:hover {
+    transform: scale(1.05);
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    box-shadow: inset 0 0 0.55em 0em;
+    color: rgb(40, 173, 142);
+}
+/*end of add to cart styling*/
+
+/*Shopping cart window styles*/
+.shopping-cart {
+    margin: 0;
+    padding: 1rem;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Tillagd av Katrina för att få Leons varukorg/overlay kod att se som det gjorde för honom innan vi slog ihop alla koder */
+.cart-overlay-window {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 2000;
+  width: auto;
+  margin: 0;
+  max-height: 95vh; /* Detta fixade problemet med scrollningen */
+  display: block;
+}
+/* Det Leon hade innan som funkade */
+/* .cart-overlay-window {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+    margin-right: 1.1rem;
+} */
+
+.overlay {
+    background-color: white;
+    border-radius: 10px;
+    width: 20rem;
+    padding: 15px;
+    position: relative;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close {
+    color: rgb(89, 86, 86);
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0.4rem;
+    right: 1rem;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    font-family: monospace, Arial, Helvetica, sans-serif;
+}
+
+#cart-container {
+    position: relative;
+}
+/* Redigerad av Katrina */
+.cart-product-img {
+    width: 80px; /* Ändrad från 50px till 80px */
+    height: auto; /* Tillagd */
+}
+
+.empty-cart-msg {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px; /* Tillagd av Katrina för spacing mellan empty cart message och buttons */
+}
+
+/* Tillagd av Katrina för bättre spacing mellan clear/checkout och total */
+.clear-cart,
+.checkoutBtn {
+  margin-bottom: 20px;
+}
+
+/*end of cart window styles*/
+
+/* icon, counter styles  */
+#icon-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    position: relative;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.shopping-cart-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+#cart-logo-btn {
+    background: none;
+    border: none;
+    color: rgb(40, 173, 142);
+}
+
+#cart-counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: white;
+    position: absolute;
+    bottom: 60%;
+    right: -10px;
+}
+
+ /* Tillagd av Katrina för bättre spacing i varukorgen */
+#cart-container > div {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* end of icon, counter styles */
+
+/* button styles */
+.clear-cart,
+.checkoutBtn {
+    background-color: rgb(182, 26, 26);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 0.5rem;
+}
+
+.clear-cart:hover,
+.checkoutBtn:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    box-shadow: inset 0 0 0.55em 0em;
+    color: rgb(182, 26, 26);
+}
+
+.checkoutBtn {
+    background-color: rgb(40, 173, 142);
+}
+
+.checkoutBtn:hover {
+    color: rgb(40, 173, 142);
+}
+
+/* end of button styles */
+
+/* media query */
+@media (min-width: 768px) {
+    .all-products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .cards img {
+        height: 10rem;
+    }
+}
+/* end of media query styles */
+
+/* Leons Kod */

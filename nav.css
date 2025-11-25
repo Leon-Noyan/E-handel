@@ -1,0 +1,132 @@
+/* Malins CSS kod från index.css redigerad av Katrina för att importera navbar & footer i Request.html
+Jag hade för många problem att köra direkt från index.css till request.html pga krockande css/html (ul)
+så skapade en extra css fil för just request navbaren, istället för att skriva om Malins kod som funkade bra på index.
+Försökte först med en fetch metod (https://stackoverflow.com/questions/31954089/how-can-i-reuse-a-navigation-bar-on-multiple-pages)
+Det mesta är Malins kod men redigerade selectors */
+
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: #2a4c81;
+  width: 100%;
+}
+
+/* Från global ul selector till .menu */
+.menu {
+  position: fixed;
+  background-color: #EFEFEF;
+  top: 90px;
+  transform: translateX(100%);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 90px);
+  list-style: none;
+  padding: 0;
+  transition: 500ms;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Uppdaterad selector från ul till menu */
+.menu.active {
+  transform: translateX(0);
+  display: block;
+  text-align: center;
+  background-color: rgba(209, 209, 209, 0.7);
+}
+
+/* Uppdaterad link selector */
+.menu li a {
+  display: block;
+  padding: 30px 20%;
+  text-decoration: none;
+  color: #2a4c81;
+}
+
+/* Uppdaterad hover selector */
+.menu li a:hover {
+  background-color: #FFF;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #EFEFEF;
+  padding: 1.3rem;
+  font-size: 2rem;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0 auto;
+  font-size: 3rem;
+}
+
+img {
+  height: 30px;
+  padding: 10px;
+}
+
+button {
+  padding: 0px;
+  border-style: none;
+}
+
+main {
+  height: 70vh;
+}
+
+footer {
+  background-color: #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.socials-container {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  justify-items: center;
+  margin: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hamburger-img {
+    display: none;
+  }
+
+  .header {
+    font-size: 1.2rem;
+  }
+
+  /* Uppdaterade selectors .menu istället för ul */
+  .menu {
+    background-color: rgba(209, 209, 209, 0.7);
+    position: absolute;
+    transform: none;
+    flex-direction: row;
+    height: 40px;
+    text-align: center;
+  }
+
+  .menu li a {
+    width: calc(100vw / 4);
+    padding: 0;
+    height: 40px;
+    align-content: center;
+  }
+
+  main {
+    height: 100vh;
+  }
+}
+
+/* Malins kod, redigerad av Katrina */

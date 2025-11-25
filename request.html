@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="request.css">
+    <title>Request Form</title>
+  </head>
+  <body>
+    <header>
+  <nav class="header">
+    <div class="navigation-menu">
+      <button class="hamburger-img">
+        <img src="/assets/menu.png" alt="hamburger-menu" />
+      </button>
+      <div class="links-container">
+        <ul class="menu">
+          <li><a href="index.html">Category</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="request.html">Request product</a></li>
+        </ul>
+      </div>
+    </div>
+    <h1>E-buy</h1>
+  </nav>
+</header>
+    <div class="page-container">
+    <h1>How can we improve?</h1>
+    <h2>Help us improve the shop by requesting products for us to sell in the future</h2>
+
+    <form id="requestForm">
+      <label for="name">Your name:</label>
+      <input id="name" type="text" placeholder="Enter your name" required />
+
+      <label for="request">What product would you like to request for future purchases?</label>
+      <input id="request" type="text" placeholder="Enter your product request" required />
+      <input type="submit" value="Send" />
+    </form>
+
+<h3>Submitted Requests</h3>
+<ul id="requestList"></ul>
+    <p id="message"></p>
+    </div>
+<footer>
+      <section class="contact-container">
+        <h3 id="contact">Contact</h3>
+        <p>E-buy AB</p>
+        <p>Trekantsvägen 1</p>
+        <p>117 43 Stockholm</p>
+        <br />
+        <p>08-XXX XXX XX</p>
+        <p>E-buy@iths.se</p>
+      </section>
+      <section class="socials-container">
+        <div class="icon">
+          <a href="">
+            <img src="/assets/facebook.png" alt="facebook-logo" />
+          </a>
+        </div>
+        <div class="icon">
+          <a href=""
+            ><img src="/assets/instagram.png" alt="instagram-logo"
+          /></a>
+        </div>
+        <div class="icon">
+          <a href=""><img src="/assets/tik-tok.png" alt="tiktok-logo" /></a>
+        </div>
+        <div class="icon">
+          <a href="">
+            <img src="/assets/linkedin.png" alt="linkedin-logo" />
+          </a>
+        </div>
+      </section>
+      <section>
+        <p>© Copyright E-buy 2025</p>
+        <br />
+        <p>Legal Terms | Privacy Policy | Cookie Settings</p>
+      </section>
+    </footer>
+    <script src="request.js"></script>
+    <script src="nav.js"></script>
+  </body>
+</html>
+
+<!-- Katrinas kod, Malins Navbar (utan Leons varukorg) & Footer kod -->
